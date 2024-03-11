@@ -1,4 +1,5 @@
 import 'package:assurance/Componnets/app_bar.dart';
+import 'package:assurance/Componnets/body.dart';
 import 'package:assurance/Componnets/card.dart';
 import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       child: Column(
         children: [
           CustomAppBar(),
-          SizedBox(height: 50),
+          Body(),
           Spacer(),
           Expanded(
             child: Row(

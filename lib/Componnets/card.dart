@@ -8,28 +8,32 @@ class cards extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       margin: EdgeInsets.all(20),
-      child:
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(
-                padding: EdgeInsets.all(10),child:Image.asset(
+      child: SizedBox(
+        width: double.infinity,
+        height: 200, // Adjust the height as needed
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center, // Align children in the center horizontally
+          mainAxisAlignment: MainAxisAlignment.center, // Align children in the center vertically
+          children: [
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Image.asset(
                 "assets/$title.png",
-                height: 100, // Fixed height in pixels
-                width: 250, // Fixed width in pixels
-                alignment: Alignment.topLeft, // Choose a suitable alignment
-                ) ,
+                height: 70,
+                width: 250,
+                alignment: Alignment.center, // Align the image within its container
               ),
+            ),
             ListTile(
-              // title: const Text('Card title 1'),
               subtitle: Text(
                 'Assurance $title',
                 style: TextStyle(color: Colors.black.withOpacity(0.6)),
               ),
             ),
           ],
-          )
-
+        ),
+      ),
     );
+
   }
 }
